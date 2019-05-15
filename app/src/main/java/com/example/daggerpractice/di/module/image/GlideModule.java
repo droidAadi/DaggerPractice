@@ -1,0 +1,43 @@
+package com.example.daggerpractice.di.module.image;
+
+import android.app.Application;
+import android.graphics.drawable.Drawable;
+
+import androidx.core.content.ContextCompat;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.RequestManager;
+import com.bumptech.glide.request.RequestOptions;
+import com.example.daggerpractice.R;
+import com.example.daggerpractice.di.scpoe.AppScope;
+
+import javax.inject.Singleton;
+
+import dagger.Module;
+import dagger.Provides;
+
+@Module
+public class GlideModule {
+
+    @AppScope
+    @Provides
+    static RequestOptions provideRequestOptions(){
+
+        return RequestOptions.placeholderOf(R.drawable.white_background).
+                error(R.drawable.white_background);
+    }
+
+    @AppScope
+    @Provides
+    static RequestManager providesGlideInstance(Application application,
+                                                RequestOptions requestOptions){
+        return Glide.with(application).setDefaultRequestOptions(requestOptions);
+    }
+
+    @AppScope
+    @Provides
+    static Drawable provideAppDrawable(Application application){
+        return ContextCompat.getDrawable(application, R.drawable.logo);
+    }
+
+}
