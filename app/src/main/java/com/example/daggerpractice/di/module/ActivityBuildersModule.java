@@ -1,6 +1,7 @@
 package com.example.daggerpractice.di.module;
 
 import com.example.daggerpractice.di.module.network.AuthModule;
+import com.example.daggerpractice.di.module.network.MainModule;
 import com.example.daggerpractice.di.module.viewmodel.AuthViewModelModule;
 import com.example.daggerpractice.di.module.viewmodel.MainViewModelsModule;
 import com.example.daggerpractice.ui.auth.AuthActivity;
@@ -42,10 +43,13 @@ public abstract class ActivityBuildersModule {
     /**
      * This sub-component contains the fragments, hence MainFragmentBuildersModule module is added
      *
+     * One more thing to note is that the dependencies provided by all the modules which are declared
+     * below in modules section will be available across complete Main sub-component.
      * @return
      */
     @ContributesAndroidInjector(
-            modules = {MainFragmentBuildersModule.class, MainViewModelsModule.class}
+            modules = {MainFragmentBuildersModule.class, MainViewModelsModule.class,
+                    MainModule.class}
     )
     abstract MainActivity contributeMainActivity();
 
