@@ -13,5 +13,4 @@ public class MainModule {
     static MainAPI providesMainApi(Retrofit retrofit){
         return retrofit.create(MainAPI.class);
     }
-
 }

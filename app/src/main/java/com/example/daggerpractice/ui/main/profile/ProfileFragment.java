@@ -16,7 +16,6 @@ import androidx.lifecycle.ViewModelProviders;
 import com.example.daggerpractice.R;
 import com.example.daggerpractice.models.User;
 import com.example.daggerpractice.ui.auth.AuthResource;
-import com.example.daggerpractice.ui.auth.AuthViewModel;
 import com.example.daggerpractice.viewmodels.VMProviderFactory;
 
 import javax.inject.Inject;

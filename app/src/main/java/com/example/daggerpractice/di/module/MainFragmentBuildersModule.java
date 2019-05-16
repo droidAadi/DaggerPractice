@@ -17,6 +17,8 @@ public abstract class MainFragmentBuildersModule {
     @ContributesAndroidInjector
     abstract ProfileFragment contributeProfileFragment();
 
-    @ContributesAndroidInjector
+    @ContributesAndroidInjector(
+            modules = {AdapterModule.class}
+    )
     abstract PostsFragment contributePostsFragment();
 }
