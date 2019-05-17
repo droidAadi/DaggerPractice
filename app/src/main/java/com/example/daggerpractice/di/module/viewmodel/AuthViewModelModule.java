@@ -14,6 +14,9 @@ import dagger.multibindings.IntoMap;
  *
  * @IntoMap : This is required for linking view-model with Dagger. This is multi-binding.
  * You can also add scope here if you want it to be limited to any certain component scope.
+ *
+ * For eg, if you want AuthViewModelModule to be available only across Auth Scope, then you can add
+ * @AuthScope
  */
 @Module
 public abstract class AuthViewModelModule {
