@@ -1,5 +1,6 @@
 package com.example.daggerpractice.di.module.network;
 
+import com.example.daggerpractice.di.scope.AuthScope;
 import com.example.daggerpractice.network.auth.AuthApi;
 
 import dagger.Module;
@@ -16,6 +17,7 @@ public class AuthModule {
      * @param retrofit
      * @return
      */
+    @AuthScope
     @Provides
     static AuthApi providesAuthApi(Retrofit retrofit) {
         return retrofit.create(AuthApi.class);

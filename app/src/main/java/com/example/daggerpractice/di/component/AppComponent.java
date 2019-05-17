@@ -7,7 +7,7 @@ import com.example.daggerpractice.SessionManager;
 import com.example.daggerpractice.di.module.ActivityBuildersModule;
 import com.example.daggerpractice.di.module.AppModule;
 import com.example.daggerpractice.di.module.viewmodel.factory.ViewModelFactoryModule;
-import com.example.daggerpractice.di.scpoe.AppScope;
+import com.example.daggerpractice.di.scope.AppScope;
 
 import dagger.BindsInstance;
 import dagger.Component;

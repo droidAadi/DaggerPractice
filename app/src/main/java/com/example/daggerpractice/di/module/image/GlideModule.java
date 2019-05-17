@@ -9,9 +9,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.RequestManager;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.daggerpractice.R;
-import com.example.daggerpractice.di.scpoe.AppScope;
-
-import javax.inject.Singleton;
+import com.example.daggerpractice.di.scope.AppScope;
 
 import dagger.Module;
 import dagger.Provides;

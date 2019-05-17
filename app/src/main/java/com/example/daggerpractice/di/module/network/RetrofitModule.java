@@ -1,6 +1,6 @@
 package com.example.daggerpractice.di.module.network;
 
-import com.example.daggerpractice.di.scpoe.AppScope;
+import com.example.daggerpractice.di.scope.AppScope;
 import com.example.daggerpractice.utils.Constants;
 
 import dagger.Module;

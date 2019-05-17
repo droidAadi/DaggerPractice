@@ -1,7 +1,6 @@
 package com.example.daggerpractice.di.module;
 
-import androidx.recyclerview.widget.RecyclerView;
-
+import com.example.daggerpractice.di.scope.PostFragmentScope;
 import com.example.daggerpractice.ui.main.posts.PostsRecyclerAdapter;
 
 import dagger.Module;
@@ -18,6 +17,7 @@ import dagger.Provides;
 @Module
 public class AdapterModule {
 
+    @PostFragmentScope
     @Provides
     static PostsRecyclerAdapter provideAdapter() {
         return new PostsRecyclerAdapter();

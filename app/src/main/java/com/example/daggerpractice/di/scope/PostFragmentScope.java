@@ -1,4 +1,4 @@
-package com.example.daggerpractice.di.scpoe;
+package com.example.daggerpractice.di.scope;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
@@ -10,5 +10,5 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Scope
 @Documented
 @Retention(RUNTIME)
-public @interface AppScope {
+public @interface PostFragmentScope {
 }

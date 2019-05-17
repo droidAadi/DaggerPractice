@@ -6,7 +6,7 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MediatorLiveData;
 import androidx.lifecycle.Observer;
 
-import com.example.daggerpractice.di.scpoe.AppScope;
+import com.example.daggerpractice.di.scope.AppScope;
 import com.example.daggerpractice.models.User;
 import com.example.daggerpractice.ui.auth.AuthResource;
 

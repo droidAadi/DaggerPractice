@@ -4,6 +4,8 @@ import com.example.daggerpractice.di.module.network.AuthModule;
 import com.example.daggerpractice.di.module.network.MainModule;
 import com.example.daggerpractice.di.module.viewmodel.AuthViewModelModule;
 import com.example.daggerpractice.di.module.viewmodel.MainViewModelsModule;
+import com.example.daggerpractice.di.scope.AuthScope;
+import com.example.daggerpractice.di.scope.MainScope;
 import com.example.daggerpractice.ui.auth.AuthActivity;
 import com.example.daggerpractice.ui.main.MainActivity;
 
@@ -35,6 +37,7 @@ public abstract class ActivityBuildersModule {
      *
      * We created AuthModule as it required a dependency of AuthAPI.
      */
+    @AuthScope
     @ContributesAndroidInjector(
             modules = {AuthViewModelModule.class, AuthModule.class}
     )
@@ -47,6 +50,7 @@ public abstract class ActivityBuildersModule {
      * below in modules section will be available across complete Main sub-component.
      * @return
      */
+    @MainScope
     @ContributesAndroidInjector(
             modules = {MainFragmentBuildersModule.class, MainViewModelsModule.class,
                     MainModule.class}
