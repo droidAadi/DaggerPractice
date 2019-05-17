@@ -36,6 +36,10 @@ public abstract class ActivityBuildersModule {
      * These modules now exist inside the AuthActivity sub-component.
      *
      * We created AuthModule as it required a dependency of AuthAPI.
+     *
+     * Adding @AuthScope here only limits the AuthActivity to AuthScope but not the modules which
+     * are mentioned here. You have to add the scope in respective modules as well if you want to
+     * limit them to certain scope.
      */
     @AuthScope
     @ContributesAndroidInjector(
